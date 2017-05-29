@@ -25,4 +25,7 @@ const path = [
 	"q-1,-1,0,-2z"
 ].join(" ");
 
-export default path;
+export default {
+	viewBox: "0 0 20 20",
+	toString: () => (path)
+};

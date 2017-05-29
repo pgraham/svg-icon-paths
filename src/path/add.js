@@ -1,7 +1,6 @@
 /**
  * Exports a string SVG path for a + symbol.
  */
-"use strict";
 
 /**
  * SVG path for + icon in 20x20 viewbox.
@@ -27,4 +26,7 @@ const path = [
 	"Q9,9,9,8.5z"
 ].join(" ");
 
-export default path;
+export default {
+	viewBox: "0 0 20 20",
+	toString: () => (path)
+};

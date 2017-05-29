@@ -29,4 +29,7 @@ const PATH = [ "M3.4,1" ]
 .concat(BOOK_RIGHT_HALF.toList())
 .join(" ");
 
-export default PATH;
+export default {
+	viewBox: "0 0 20 20",
+	toString: () => (PATH)
+};

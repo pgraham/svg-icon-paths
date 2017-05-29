@@ -61,4 +61,7 @@ const path = [ "M10,2.75" ]
 ])
 .join(" ");
 
-export default path;
+export default {
+	viewBox: "0 0 20 20",
+	toString: () => (path)
+};
