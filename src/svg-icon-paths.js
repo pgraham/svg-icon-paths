@@ -10,6 +10,7 @@ import curvedArrowIconPath from "./path/curvedArrow";
 import deleteIconPath from "./path/delete";
 import editIconPath from "./path/edit";
 import technicalDebtIconPath from "./path/technicalDebt";
+import trashCan from "./path/trashCan";
 
 export {
 	addIconPath,
@@ -19,5 +20,6 @@ export {
 	curvedArrowIconPath,
 	deleteIconPath,
 	editIconPath,
-	technicalDebtIconPath
+	technicalDebtIconPath,
+	trashCan
 };
