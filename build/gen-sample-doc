@@ -7,8 +7,10 @@ let headEl = fs.readFileSync("build/htmlfrag/head.html")
 
 function buildSvgEl(pathName, path) {
 	return `<h2>${pathName}</h2>
-<div class="viewBox"><span class="viewBox-label">Viewbox: </span><span class="viewBox-value">${path.viewBox}</span></div>
-<svg style="margin-left:100px;height:100px;" viewBox="${path.viewBox}"><path d="${path}"/></svg>
+<div className="path-sample">
+	<div class="viewBox">${path.viewBox}</div>
+	<svg viewBox="${path.viewBox}"><path d="${path}"/></svg>
+</div>
 
 `;
 }
