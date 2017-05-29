@@ -7,7 +7,7 @@ let headEl = fs.readFileSync("build/htmlfrag/head.html")
 
 function buildSvgEl(pathName, path) {
 	return `<h2>${pathName}</h2>
-<div className="path-sample">
+<div class="path-sample">
 	<div class="viewBox">${path.viewBox}</div>
 	<svg viewBox="${path.viewBox}"><path d="${path}"/></svg>
 </div>
@@ -22,4 +22,8 @@ fs.writeFileSync("docs/index.html", `${headEl}
 <h1>Available Paths</h1>
 
 ${svgEls.join("")}
+
+<footer>
+© ${(new Date()).getFullYear()} Philip Graham
+</footer>
 `);
