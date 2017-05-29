@@ -1,18 +1,23 @@
 #!/usr/bin/env node
 
-var fs = require("fs");
-var svgPaths = require("../src/svg-icon-paths");
+const fs = require("fs");
+const svgPaths = require("../src/svg-icon-paths");
+
+let headEl = fs.readFileSync("build/htmlfrag/head.html")
 
 function buildSvgEl(pathName, path) {
 	return `<h2>${pathName}</h2>
-<svg style="height:100px;" viewBox="${path.viewBox}"><path d="${path}"/></svg>
+<div class="viewBox"><span class="viewBox-label">Viewbox: </span><span class="viewBox-value">${path.viewBox}</span></div>
+<svg style="margin-left:100px;height:100px;" viewBox="${path.viewBox}"><path d="${path}"/></svg>
 
 `;
 }
 
+
 let svgEls = Object.keys(svgPaths).map(k => buildSvgEl(k, svgPaths[k]));
 
-fs.writeFileSync("docs/index.html", `<h1>Available Paths</h1>
+fs.writeFileSync("docs/index.html", `${headEl}
+<h1>Available Paths</h1>
 
 ${svgEls.join("")}
 `);
