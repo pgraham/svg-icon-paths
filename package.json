@@ -1,0 +1,30 @@
+{
+  "name": "svg-icon-paths",
+  "version": "1.0.0",
+  "description": "Collection of SVG paths for creating icons",
+  "main": "dist/svg-icon-paths.js",
+  "scripts": {
+    "test": "jasmine",
+    "build": "babel src -d dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pgraham/svg-icon-paths.git"
+  },
+  "keywords": [
+    "svg",
+    "icon",
+    "paths"
+  ],
+  "author": "https://github.com/pgraham",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/pgraham/svg-icon-paths/issues"
+  },
+  "homepage": "https://github.com/pgraham/svg-icon-paths#readme",
+  "devDependencies": {
+    "babel-cli": "^6.23.0",
+    "babel-preset-es2015": "^6.22.0",
+    "jasmine": "^2.5.3"
+  }
+}

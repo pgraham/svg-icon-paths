@@ -1,3 +1,7 @@
+# Distribution directory
+dist
+
+# GITHUB GENERATED
 # Logs
 logs
 *.log
