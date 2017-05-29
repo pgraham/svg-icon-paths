@@ -11,17 +11,6 @@ import deleteIconPath from "./path/delete";
 import editIconPath from "./path/edit";
 import technicalDebtIconPath from "./path/technicalDebt";
 
-var paths = {
-	addIconPath,
-	bookIconPath,
-	bugIconPath,
-	checkIconPath,
-	curvedArrowIconPath,
-	deleteIconPath,
-	editIconPath,
-	technicalDebtIconPath
-};
-
 export {
 	addIconPath,
 	bookIconPath,
@@ -32,4 +21,3 @@ export {
 	editIconPath,
 	technicalDebtIconPath
 };
-export default paths;

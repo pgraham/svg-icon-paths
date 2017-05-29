@@ -1,0 +1,19 @@
+#!/usr/bin/env node
+
+var fs = require("fs");
+var svgPaths = require("../src/svg-icon-paths");
+console.log(svgPaths);
+
+function buildSvgEl(pathName, path) {
+	return `<h2>${pathName}</h2>
+<svg style="height:100px;" viewBox="${path.viewBox}"><path d="${path}"/></svg>
+
+`;
+}
+
+let svgEls = Object.keys(svgPaths).map(k => buildSvgEl(k, svgPaths[k]));
+
+fs.writeFileSync("docs/index.html", `<h1>Available Paths</h1>
+
+${svgEls.join("")}
+`);
