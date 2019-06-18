@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 const fs = require("fs");
-const svgPaths = require("../src/svg-icon-paths");
+const svgPaths = require("../src/index");
 
 let headEl = fs.readFileSync("build/htmlfrag/head.html")
 
