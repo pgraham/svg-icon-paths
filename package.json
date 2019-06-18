@@ -5,8 +5,10 @@
   "main": "dist/svg-icon-paths.js",
   "scripts": {
     "test": "jasmine",
-    "build": "babel src -d dist && npm run gen-sample-doc",
-    "gen-sample-doc": "babel-node build/gen-sample-doc"
+    "compile": "babel src -d dist",
+    "gen-dist-package": "build/gen-dist-package",
+    "gen-sample-doc": "babel-node build/gen-sample-doc",
+    "release": "npm run compile && npm run gen-dist-package && npm publish dist"
   },
   "repository": {
     "type": "git",

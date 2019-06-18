@@ -1,0 +1,11 @@
+#!/usr/bin/env node
+
+const { writeFileSync } = require('fs')
+
+const pkg = require('../package.json')
+
+pkg.main = 'index.js'
+delete pkg.scripts
+delete pkg.devDependencies
+
+writeFileSync('dist/package.json', JSON.stringify(pkg, null, 2))
