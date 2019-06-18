@@ -14,7 +14,7 @@ import edit from 'svg-icon-paths/edit'
 
 export default function MyComponent () {
 	return (
-		<button><svg viewBox="0 0 20 20"><path d={edit}/></svg></button>
+		<button><svg viewBox={edit.viewBox}><path d={edit}/></svg></button>
 	)
 }
 ```
