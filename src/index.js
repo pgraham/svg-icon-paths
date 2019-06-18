@@ -2,15 +2,15 @@
  * Top level exports. Recommended to only require cherry picked paths.
  */
 
-import add from "./path/add";
-import book from "./path/book";
-import bug from "./path/bug";
-import check from "./path/check";
-import curvedArrow from "./path/curvedArrow";
-import crossMark from "./path/crossMark";
-import edit from "./path/edit";
-import technicalDebt from "./path/technicalDebt";
-import trashCan from "./path/trashCan";
+import add from "./add";
+import book from "./book";
+import bug from "./bug";
+import check from "./check";
+import curvedArrow from "./curvedArrow";
+import crossMark from "./crossMark";
+import edit from "./edit";
+import technicalDebt from "./technicalDebt";
+import trashCan from "./trashCan";
 
 export {
 	add,
