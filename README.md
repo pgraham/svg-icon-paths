@@ -39,4 +39,4 @@ export default function MyComponent () {
 
 ## Available paths:
 
-[http://htmlpreview.github.io/?https://github.com/pgraham/svg-icon-paths/blob/master/docs/index.html](docs/index.html)
+[docs/index.html](http://htmlpreview.github.io/?https://github.com/pgraham/svg-icon-paths/blob/master/docs/index.html)
