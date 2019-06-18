@@ -8,7 +8,7 @@
     "compile": "babel src -d dist",
     "gen-dist-package": "build/gen-dist-package",
     "gen-sample-doc": "babel-node build/gen-sample-doc",
-    "release": "npm run compile && npm run gen-dist-package && npm publish dist"
+    "release": "npm run compile && npm run gen-dist-package && cp README.md dist/ && npm publish dist"
   },
   "repository": {
     "type": "git",
