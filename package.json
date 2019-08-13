@@ -1,6 +1,6 @@
 {
   "name": "svg-icon-paths",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Collection of SVG paths for creating icons",
   "main": "dist/svg-icon-paths.js",
   "scripts": {
