@@ -6,8 +6,8 @@ const svgPaths = require("../src/index");
 let headEl = fs.readFileSync("build/htmlfrag/head.html")
 
 function buildSvgEl(pathName, path) {
-	return `<h2>${pathName}</h2>
-<div class="path-sample">
+	return `<div class="path-sample">
+	<h2>${pathName}</h2>
 	<div class="viewBox">${path.viewBox}</div>
 	<svg viewBox="${path.viewBox}"><path d="${path}"/></svg>
 </div>
@@ -20,8 +20,9 @@ let svgEls = Object.keys(svgPaths).map(k => buildSvgEl(k, svgPaths[k]));
 
 fs.writeFileSync("docs/index.html", `${headEl}
 <h1>Available Paths</h1>
-
+<div class="sample-paths">
 ${svgEls.join("")}
+</div>
 
 <footer>
 © ${(new Date()).getFullYear()} Philip Graham
