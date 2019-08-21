@@ -9,6 +9,7 @@ import check from "./check";
 import curvedArrow from "./curvedArrow";
 import crossMark from "./crossMark";
 import edit from "./edit";
+import leftArrow from "./leftArrow";
 import menu from "./menu";
 import technicalDebt from "./technicalDebt";
 import trashCan from "./trashCan";
@@ -21,6 +22,7 @@ export {
 	curvedArrow,
 	crossMark,
 	edit,
+	leftArrow,
 	menu,
 	technicalDebt,
 	trashCan
