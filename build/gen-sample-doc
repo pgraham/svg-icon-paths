@@ -1,30 +1,79 @@
 #!/usr/bin/env node
 
-const fs = require("fs");
-const svgPaths = require("../src/index");
+const fs = require('fs')
+const svgPaths = require('../src/index')
 
-let headEl = fs.readFileSync("build/htmlfrag/head.html")
+const headEl = `<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8"/>
+	<title>SVG Icon paths</title>
+	<style type="text/css">
+		body {
+			font-family: 
+				apple-system,
+				BlinkMacSystemFont,
+				"Segoe UI",
+				Roboto,
+				Oxygen-Sans,
+				Ubuntu,
+				Cantarell,
+				"Helvetica Neue",
+				sans-serif;
+
+			color: #000;
+		}
+		h2 {
+			margin-bottom: 0;
+		}
+		svg {
+			height: 100px;
+			margin-left: 25px;
+		}
+		svg path {
+			fill: #BD433F;
+			stroke: #0F252C;
+			vector-effect: non-scaling-stroke;
+		}
+		.path-sample {
+			border-bottom: 1px solid #999;
+			padding-bottom: 1em;
+		}
+		.viewBox {
+			color: #999;
+			margin-bottom: 1em;
+		}
+		footer {
+			margin-top: 1.75em;
+			font-size: 0.8em;
+		}
+	</style>
+
+<body>
+`
 
 function buildSvgEl(pathName, path) {
-	return `<div class="path-sample">
+  return `<div class="path-sample">
 	<h2>${pathName}</h2>
 	<div class="viewBox">${path.viewBox}</div>
 	<svg viewBox="${path.viewBox}"><path d="${path}"/></svg>
 </div>
 
-`;
+`
 }
 
+let svgEls = Object.keys(svgPaths).map((k) => buildSvgEl(k, svgPaths[k]))
 
-let svgEls = Object.keys(svgPaths).map(k => buildSvgEl(k, svgPaths[k]));
-
-fs.writeFileSync("docs/index.html", `${headEl}
+fs.writeFileSync(
+  'docs/index.html',
+  `${headEl}
 <h1>Available Paths</h1>
 <div class="sample-paths">
-${svgEls.join("")}
+${svgEls.join('')}
 </div>
 
 <footer>
-© ${(new Date()).getFullYear()} Philip Graham
+© ${new Date().getFullYear()} Philip Graham
 </footer>
-`);
+`
+)
