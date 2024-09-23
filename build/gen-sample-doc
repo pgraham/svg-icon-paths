@@ -55,10 +55,16 @@ const headEl = `<!DOCTYPE html>
 `
 
 function buildSvgEl(pathName, path) {
+  let attributes = ''
+  if (path.attributes) {
+    attributes = Object.keys(path.attributes).map(
+      (k) => `${k}="${path.attributes[k]}"`
+    )
+  }
   return `<div class="path-sample">
 	<h2>${pathName}</h2>
 	<div class="viewBox">${path.viewBox}</div>
-	<svg viewBox="${path.viewBox}"><path d="${path}"/></svg>
+	<svg viewBox="${path.viewBox}"><path d="${path}" ${attributes}/></svg>
 </div>
 
 `
