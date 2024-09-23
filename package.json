@@ -3,11 +3,12 @@
   "version": "1.0.2",
   "description": "Collection of SVG paths for creating icons",
   "main": "dist/svg-icon-paths.js",
+  "type": "module",
   "scripts": {
     "test": "jasmine",
-    "compile": "babel src -d dist",
+    "compile": "swc src -d dist",
     "gen-dist-package": "build/gen-dist-package",
-    "gen-sample-doc": "babel-node build/gen-sample-doc",
+    "gen-sample-doc": "build/gen-sample-doc",
     "release": "npm run compile && npm run gen-dist-package && cp README.md dist/ && npm publish dist"
   },
   "repository": {
@@ -26,8 +27,7 @@
   },
   "homepage": "https://github.com/pgraham/svg-icon-paths#readme",
   "devDependencies": {
-    "babel-cli": "^6.23.0",
-    "babel-preset-es2015": "^6.22.0",
-    "jasmine": "^2.5.3"
+    "@swc/cli": "^0.4.1-nightly.20240914",
+    "@swc/core": "^1.7.26"
   }
 }

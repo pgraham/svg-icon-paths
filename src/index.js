@@ -2,20 +2,20 @@
  * Top level exports. Recommended to only require cherry picked paths.
  */
 
-import add from './add'
-import book from './book'
-import bug from './bug'
-import check from './check'
-import curvedArrow from './curvedArrow'
-import crossMark from './crossMark'
-import edit from './edit'
-import leftArrow from './leftArrow'
-import menu from './menu'
-import technicalDebt from './technicalDebt'
-import trashCan from './trashCan'
-import reveal from './reveal'
+import add from './add.js'
+import book from './book.js'
+import bug from './bug.js'
+import check from './check.js'
+import curvedArrow from './curvedArrow.js'
+import crossMark from './crossMark.js'
+import edit from './edit.js'
+import leftArrow from './leftArrow.js'
+import menu from './menu.js'
+import technicalDebt from './technicalDebt.js'
+import trashCan from './trashCan.js'
+import reveal from './reveal.js'
 
-export {
+export default {
   add,
   book,
   bug,

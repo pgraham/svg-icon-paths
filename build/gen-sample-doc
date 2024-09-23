@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
-const fs = require('fs')
-const svgPaths = require('../src/index')
+import fs from 'fs'
+import svgPaths from '../src/index.js'
 
 const headEl = `<!DOCTYPE html>
 <html>
