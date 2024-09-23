@@ -16,4 +16,7 @@ const path = `M2,8
 export default {
   viewBox: '0 0 20 20',
   toString: () => path,
+  attributes: {
+    'fill-rule': 'evenodd',
+  },
 }

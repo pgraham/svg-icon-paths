@@ -8,7 +8,8 @@ Collection of SVG paths for icons.
 $ npm install svg-icon-paths
 ```
 
-*somewhere.js[x]*
+_somewhere.js[x]_
+
 ```
 import edit from 'svg-icon-paths/edit'
 
@@ -19,7 +20,8 @@ export default function MyComponent () {
 }
 ```
 
-*somewhere.css*
+_somewhere.css_
+
 ```
 .toolbar {
   display: flex;
@@ -35,6 +37,17 @@ export default function MyComponent () {
 		}
 	}
 }
+```
+
+## Attributes
+
+Some paths include a collection of recommended attributes:
+
+```
+import reveal from 'svg-icon-paths/reveal'
+
+const attributes = Object.keys(reveal.attributes).map(k => `${k}="${reveal.attributes[k]}`).join(' ')
+const svgSrc = `<svg viewBox="${edit.viewBox}"><path d={reveal} ${attributes}/></svg>`
 ```
 
 ## Available paths:
